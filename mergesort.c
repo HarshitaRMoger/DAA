@@ -33,7 +33,7 @@ void merge(int A[SIZE],int l,int m,int r)
 
             m=(l+r)/2;
             mergesort(A,l,m);
-            mergesort(A,m+l,r);
+            mergesort(A,m+1,r);
             merge(A,l,m,r);
 
         }
@@ -45,7 +45,7 @@ void merge(int A[SIZE],int l,int m,int r)
         scanf("%d",&n);
         printf("\n Read array elements\n");
         for(i=0;i<=n-1;i++)
-            scanf("%d",A[i]);
+            scanf("%d",&A[i]);
         mergesort(A,0,n-1);
         printf("\n sorted elements are\n");
         for(i=0;i<=n-1;i++)
